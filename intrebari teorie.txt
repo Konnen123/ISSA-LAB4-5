@@ -1,0 +1,38 @@
+INTREBARI EX1 (ala cu lane detection):
+de blur, matrice sparse
+cum convertesc o culoare la o nuanta de gri? => NTSC formula; ca mod de stocare griul cum e stocat
+ce s-ar intampla daca n-ai lua trapezul ci toata poza?
+ceva cu ordinea trignonometrica, in ce ordine se iau punctele pentru trapez/masca/perspective transform ca sa fie afisate
+ce returneaza functia argwhere, si ce tip de vector returneaza.
+cum se aplica filtrele Sobel
+pentru a converti o culoare la gri => procedeu dot product este o transformare liniara
+De ce am taiat din poza? => ca e capota lucioasa
+
+Ce se intampla daca nu foloseam trapezul ca masca?
+Cum functioneaza filtrele?
+Cum faci din color in black&white?
+In ce ordine se dau punctele la trapez? Ce se intampla daca nu le dai in ordinea trigonometrica?
+Formatul de iesire de la argwhere()
+Threshold: ce face argumentul 3, ce se intampla daca il schimbi, alte metode de a face threshold?
+Schimba culoarea la linie (ordinea nu e RGB e BGR)
+De ce se foloseste convertScaleAbs si nu se face un cast la float32?
+
+ce alte metode de blur cunosc (gaussian, si cum arata formula) , 
+ce as putea sa fac ca sa aplic filtru doar pe jumatate de ecran,
+ ce se intampla cu programul daca trapezul e mai mic, 
+ce valori are efectiv blur (1/nr total de valori in matricea blur), 
+de ce mi se buguieste incadrarea de linie pe banda
+modifica linie de cod ex: culorile benzilor, pune banda cu 50px mai sus
+Cand ai facut resize se pastreaza aspect ratio? Cum faci sa se pastreze aspect ratio?
+
+
+
+
+INTREBARI EX2 (ala cu documentatia):
+diferenta dintre send si sendAll
+in implementarea de socket default din python exista sendAll dar de ce nu exista receiveAll
+de ce avem receiveAll in cod (probabil aceeasi intrebare ca mai sus)
+cum pun in doc param obtional?
+ce face select?
+Care e diferenta intre textul de pe prima linie de docstring si restul?(prima linie e summary)
+De ce exista implementare din librarie pt sendall si nu pt recvall?

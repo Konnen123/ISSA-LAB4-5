@@ -5,6 +5,42 @@ import datetime
 
 from typing import *
 
+"""
+object_socket.py
+
+This module provides classes for sending and receiving arbitrary Python objects 
+over TCP sockets using serialization (`pickle`). It includes two main classes:
+
+- `ObjectSenderSocket`: A server-side socket for sending Python objects to a single receiver.
+- `ObjectReceiverSocket`: A client-side socket for connecting to a sender and receiving objects.
+
+Features:
+- Uses a fixed-size header to transmit object lengths for reliable data reconstruction.
+- Handles partial reads and timeouts for robust communication.
+- Configurable debug/logging output for visibility during development.
+- Designed for synchronous communication between a single sender and receiver.
+
+Classes:
+- ObjectSocketParams: Holds static socket configuration constants.
+- ObjectSenderSocket: Handles sending serialized Python objects.
+- ObjectReceiverSocket: Handles receiving and deserializing Python objects.
+
+Example Usage:
+
+Sender (Server):
+    sender = ObjectSenderSocket('127.0.0.1', 5000, print_when_sending_object=True)
+    sender.send_object({'msg': 'Hello, receiver!'})
+
+Receiver (Client):
+    receiver = ObjectReceiverSocket('127.0.0.1', 5000, print_when_receiving_object=True)
+    obj = receiver.recv_object()
+    print(obj)
+
+Note:
+- Only one receiver can be connected to the sender at a time.
+- The data is serialized using `pickle`, so both ends must trust each other to avoid security issues.
+
+"""
 
 class ObjectSocketParams:
     """Static configuration parameters for ObjectSocket communication."""
